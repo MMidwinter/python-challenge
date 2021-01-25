@@ -8,7 +8,6 @@ import csv
 election_path = os.path.join('..', 'Resources', 'election_data.csv')
 
 VoteResults = {}
-#VoteCount = {}
 VoteTotal = []
 CandidateVotes = []
 VotePercentage = []
@@ -26,20 +25,21 @@ with open(election_path) as csvfile:
 
     header = next(election_reader)
 
+    #Add the candidates name to a list for each time they get a vote
     for row in election_reader:
         #print(row)
         CandidateVotes.append(row[2])
         
         
-    #    VoteCount = {}
 
+    #Count the total votes
     VoteTotal = len(CandidateVotes)
     #print(VoteTotal)
     
+    #Create a set of all the candidates
     Candidates = set(CandidateVotes)
     #print(Candidates)
 
-    #candidate_list = Candidates
     #print(candidate_list)
     f = open("PyPoll Analysis.txt", "w")
 

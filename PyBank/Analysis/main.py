@@ -58,16 +58,6 @@ with open(budget_path) as csvfile:
             
             previous_row = row
 
-#        if (int(row[1])-int(previous_row[1])) > int(GreatestProfit[0]):
- #           GreatestProfit = change
-  #          GreatestProfitMonth = str(row[0])
-   #         #print(GreatestProfitMonth)
-    #    
-     #   if (int(row[1])-int(previous_row[1])) > int(GreatestLoss[0]):
-      #      GreatestLoss = change
-       #     GreatestLossMonth = str(row[0])
-            #print(GreatestLossMonth)
-
     #Print the number of Months
     #print(len(Month))
     MonthCount = len(Month)
